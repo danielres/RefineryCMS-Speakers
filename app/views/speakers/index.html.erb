@@ -1,0 +1,11 @@
+<% content_for :body_content_left do %>
+  <ul id="speakers">
+    <% @speakers.each do |speaker| %>
+      <li>
+        <%= link_to speaker.firstname, speaker_path(speaker) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render :partial => "/shared/content_page" %>
