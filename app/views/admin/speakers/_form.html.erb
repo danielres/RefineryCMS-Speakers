@@ -15,6 +15,16 @@
   </div>
   
   <div class='field'>
+    <%= f.label :image -%>
+    <%= render :partial => "/shared/admin/image_picker", :locals => {
+          :f => f,
+          :field => :image_id,
+          :image => @speaker.image,
+          :toggle_image_display => false
+        } %>
+  </div>
+  
+  <div class='field'>
     <div id='page-tabs' class='clearfix ui-tabs ui-widget ui-widget-content ui-corner-all'>
       <ul id='page_parts'>
         <% [:description].each_with_index do |part, part_index| %>
@@ -32,16 +42,6 @@
         <% end %>
       </div>
     </div>
-  </div>
-  
-  <div class='field'>
-    <%= f.label :photo -%>
-    <%= render :partial => "/shared/admin/image_picker", :locals => {
-          :f => f,
-          :field => :photo_id,
-          :image => @speaker.photo,
-          :toggle_image_display => false
-        } %>
   </div>
   
   <%= render :partial => "/shared/admin/form_actions",

@@ -5,21 +5,29 @@ fr:
         image: image
   plugins:
     speakers:
-      title: Speakers
+      title: Intervenants
   admin:
     speakers:
       actions:
-        create_new: Créer un(e) nouve(au/l/lle) Speaker
-        reorder: Réordonner les Speakers
-        reorder_done: Fin de réordonnancement des Speakers
+        create_new: Créer un nouvel intervenant
+        reorder: Réordonner les intervenants
+        reorder_done: Fin de réordonnancement des intervenants
       records:
-        title: Speakers
+        title: Intervenants
         sorry_no_results: "Désolé ! Aucun résultat."
-        no_items_yet: 'Il n''y a actuellement aucun(e) Speaker. Cliquer sur "Créer un(e) nouve(au/l/lle) Speaker" pour créer votre premi(er/ère) speaker.'
-      speaker:
-        view_live_html: Voir ce(t/tte) speaker <br/><em>(Ouvre une nouvelle fenêtre)</em>
-        edit: Modifier ce(t/tte) speaker
-        delete: Supprimer définitivement ce(t/tte) speaker
+        no_items_yet: 'Il n''y a actuellement aucun intervenant. Cliquer sur "Créer un nouvel intervenant" pour créer votre premier intervenant.'
+      intervenant:
+        view_live_html: Voir cet intervenant <br/><em>(Ouvre une nouvelle fenêtre)</em>
+        edit: Modifier cet intervenant
+        delete: Supprimer définitivement cet intervenant
   speakers:
     show:
-      other: Autres Speakers
+      other: Autres intervenants
+    speaker:
+      description: Description
+      events: Évènements
+
+  # TRANSLATIONS FOR THE EVENTS ENGINE
+  events:
+    event:
+      speakers: Intervenants

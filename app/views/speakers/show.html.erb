@@ -1,44 +1,15 @@
 <% content_for :body_content_title do %>
-  <%= @speaker.firstname %>
+  <%= @speaker.firstname %>   <%= @speaker.lastname %>
 <% end %>
 
 <% content_for :body_content_left do %>
-  <section>
-    <h1>Firstname</h1>
-    <p>
-      <%=raw @speaker.firstname %>
-    </p>
-  </section>
-  <section>
-    <h1>Lastname</h1>
-    <p>
-      <%=raw @speaker.lastname %>
-    </p>
-  </section>
-  <section>
-    <h1>Description</h1>
-    <p>
-      <%=raw @speaker.description %>
-    </p>
-  </section>
-  <section>
-    <h1>Photo</h1>
-    <p>
-      <%= image_fu @speaker.photo, nil %>
-    </p>
-  </section>
+  <%= render @speaker, :individual => true %>
 <% end %>
 
 <% content_for :body_content_right do %>
   <aside>
     <h2><%= t('.other') %></h2>
-    <ul id="speakers">
-      <% @speakers.each do |speaker| %>
-        <li>
-          <%= link_to speaker.firstname, speaker_path(speaker) %>
-        </li>
-      <% end %>
-    </ul>
+    <%= render 'speakers/list', :speakers => @speakers, :with_images => true, :img_width => 30  %>
   </aside>
 <% end %>
 

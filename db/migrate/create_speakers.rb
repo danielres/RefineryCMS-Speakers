@@ -4,8 +4,8 @@ class CreateSpeakers < ActiveRecord::Migration
     create_table :speakers do |t|
       t.string :firstname
       t.string :lastname
+      t.integer :image_id
       t.text :description
-      t.integer :photo_id
       t.integer :position
 
       t.timestamps
