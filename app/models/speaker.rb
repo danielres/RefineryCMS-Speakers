@@ -5,4 +5,8 @@ class Speaker < ActiveRecord::Base
   validates :firstname, :presence => true, :uniqueness => true
   
   belongs_to :photo, :class_name => 'Image'
+  
+  def to_s
+    "#{firstname} #{lastname}"
+  end
 end
